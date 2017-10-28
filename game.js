@@ -26,17 +26,16 @@ var userDam1 = -1
 var userDam2 = -5
 var userDam3 = -10
 
-var result = "You beat a monkey Way to go, bucko!"
-
+var result = "You beat a monkey. Way to go, bucko!"
 
 function update() {
+
     checkReset()
     document.getElementById("opHealth").innerText = opHealth;
     document.getElementById("uHealth").innerText = uHealth
     document.getElementById("hits").innerText = hits
-    uHD()
+    dealDam()
 }
-
 
 function checkReset() {
     if (opHealth < 0) {
@@ -45,7 +44,7 @@ function checkReset() {
     }
 }
 
-function outcome(){
+function outcome() {
     document.getElementById("result").innerText = result
 }
 
@@ -59,6 +58,7 @@ function slapC() {
     opHealth += slap
     hits += 1
     update()
+    
 }
 
 function punchC() {
@@ -73,13 +73,25 @@ function kickC() {
     update()
 }
 
-var myVar;
-
-function uHD() {
-    myVar = setInterval(killUser, 1000);
+/*function myFunction() {
+    setInterval(killUser, 1000);
 }
 
 function killUser() {
-  uHealth - 1
+    if (isPlaying) {
+        uHealth -= 1
+    }
+    update()
 }
+*/
+
+function dealDam(){
+    var bat = Math.random();
+    if(bat > .80){
+        uHealth += 20;
+    }else if(bat < .20){
+        uHealth -= 30;
+    }
+}
+
 update()

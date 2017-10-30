@@ -73,7 +73,7 @@ function deShield() {
 //----------------update stats function -------------------------
 
 function update(){
-    if(pLife == 0 || cLife == 0)
+    if(pLife <= 0 || cLife <= 0)
     newGame()
 
     document.getElementById("cLife").innerText = cLife;

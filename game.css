@@ -1,5 +1,20 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
-.enemy {
-    height: 200px;
-    width: 200px;
+body {
+    background-image: url("http://www.pak101.com/funnypictures/Animals/2011/11/2/Monkies_watching_movies_cyyut.jpg");	
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 3em
+}
+
+.butt {
+    background-color: black;
+    opacity: .85
+
+}
+
+.tip {
+    background-color: grey
 }

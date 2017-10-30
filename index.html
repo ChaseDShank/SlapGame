@@ -2,25 +2,74 @@
 <head>
 	<title>Slap Object Game</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="game.css">
 </head>
 <body>
+	<container>
+			<div class="text-center tip"><br><h4><strong>Pro tip: keep shield and stamina above 0 to make your attacks effective!</strong><h4></div>
+		<div class="row text-center">
+			<div class="col-xs-4">
+				<h4><span><strong>Monkey Health: </strong><span id="cLife"></span></span></h4>
+			</div>	
+			<div class="col-xs-4">					
+			</div>
 
-	<h4><span>Monkey Health:<span id="opHealth"></span></span></h4>
-	<h4><span>Your Health:<span id="uHealth"></span></span></h4>
-	<h4><span>Hits:<span id="hits"></span></span></h4>
-
-	
-	<img id="monkey" class="enemy" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ83YJxiOCNkXLq0szl3seZcTVuz-MQFa7XY7zepABojX2OduzodA" alt="opponent">
-	<button onclick="thisFunction()">Roulette</button>
-	<footer>
-		<div>
-			<button onclick="slapC()">Slap</button>
-			<button onclick="punchC()">Punch</button>
-			<button onclick="kickC()">Kick</button>
+			<div class="col-xs-4">
+				<h4><span><strong>Your Health : </strong><span id="pLife"></span></span></h4>				
+			</div>
 		</div>
-	</footer>
+			
+		<div class="row text-center">
+			<div class="col-xs-4">
+					<button class="butt" onclick="attack()">Attack</button>
+					<h5><span>Number of attacks: <span id="hits"></span></span></h5>					
+			</div>
+			<div class="col-xs-4">
+
+			</div>
+			<div class="col-xs-4">
+		
+				<button class="butt" onclick="clickLife()">Health +1</button>
+					
+			</div>
+		</div>	
+			
+		<div class="row text-center">
+			<div class="col-xs-6">
+					<h4><span><strong>Stamina: </strong><br><span id="power"></span></span></h4>
+					
+			</div>
+			<div class="col-xs-6">
+					<h4><span><strong>Shield: </strong><br><span id="shield"></span></span></h4>
+					
+			</div>
+			
+			
+		</div>
+		
+		<div class="row text-center">
+				<div class="col-xs-6">
+				<button class="butt" onclick="clickPower()">Stamina +3</button>
+						
+				</div>
+				<div class="col-xs-6">
+				<button class="butt" onclick="clickShield()">Shield +1</button>
+						
+				</div>
+				
+				
+			</div>	
+		<div class="row text-center">
+				<button class="lilbutt" onclick="newGame()">+ Increase Difficulty +</button>				
+		</div>
+		
+			
+			
+	</container>
+	<script src="game.js">
+	</script>
+	</body>
+	</html>
 	
-	<script src="game.js"></script>
-</body>
-</html>
